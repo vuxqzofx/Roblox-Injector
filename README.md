@@ -1,11 +1,11 @@
 # Roblox-Injector
 This source is a roblox injector using the Proxying method with vcruntime140.dll  
 ## Setup
-For this to work you need to first put this under your DllMain:  
+For this to work you first need to put this under your DllMain:  
 ```Cpp
 extern "C" __declspec(dllexport) int NextHook(int nCode, WPARAM wParam, LPARAM lParam) { return CallNextHookEx(NULL, nCode, wParam, lParam); }
 ```
-If you have dont this then the next step is to make a new file called Proxy.h and include it into your main.cpp  
+After you have done this step make a new file called Proxy.h and include it into your main.cpp / Project  
 After you have done that add this into Proxy.h:  
 ```Cpp
 #pragma once
