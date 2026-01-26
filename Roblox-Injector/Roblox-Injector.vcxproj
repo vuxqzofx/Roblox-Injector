@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{a3e71fa3-f45d-423b-a3b0-21a34a26d59e}</ProjectGuid>
+    <RootNamespace>RobloxInjector</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Roblox-Injector</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)Dependencies\Chilkat\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)Dependencies\Chilkat\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Ws2_32.lib;ChilkatRel_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Certificate.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\allC.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\allUnicode.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\allUnicodeC.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\chilkatDefs.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\Chilkat_C.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkAi.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkAiW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkAsn.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkAsnW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkAuthAws.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkAuthAwsW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkAuthAzureSAS.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkAuthAzureSASW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkAuthAzureStorage.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkAuthAzureStorageW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkAuthGoogle.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkAuthGoogleW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkBaseProgress.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkBaseProgressW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkBinData.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkBinDataW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkByteData.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkBz2.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkBz2W.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkCache.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkCacheW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkCert.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkCertChain.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkCertChainW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkCertStore.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkCertStoreW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkCertW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkCharset.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkCharsetW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkClassWithCallbacks.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkClassWithCallbacksW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkCodeSign.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkCodeSignW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkCompression.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkCompressionW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkCrypt2.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkCrypt2W.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkCsr.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkCsrW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkCsv.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkCsvW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkDateTime.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkDateTimeW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkDh.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkDhW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkDirTree.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkDirTreeW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkDkim.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkDkimW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkDns.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkDnsW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkDsa.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkDsaW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkDtObj.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkDtObjW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkEcc.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkEccW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkEdDSA.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkEdDSAW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkEmail.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkEmailBundle.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkEmailBundleW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkEmailW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkFileAccess.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkFileAccessW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkFtp2.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkFtp2Progress.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkFtp2ProgressW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkFtp2W.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkGlobal.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkGlobalW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkGzip.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkGzipW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkHashtable.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkHashtableW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkHtmlToText.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkHtmlToTextW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkHtmlToXml.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkHtmlToXmlW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkHttp.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkHttpProgress.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkHttpProgressW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkHttpRequest.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkHttpRequestW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkHttpResponse.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkHttpResponseW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkHttpW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkImap.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkImapW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkJavaKeyStore.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkJavaKeyStoreW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkJsonArray.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkJsonArrayW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkJsonObject.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkJsonObjectW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkJwe.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkJweW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkJws.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkJwsW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkJwt.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkJwtW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkLog.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkLogW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkMailboxes.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkMailboxesW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkMailMan.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkMailManProgress.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkMailManProgressW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkMailManW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkMessageSet.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkMessageSetW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkMht.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkMhtW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkMime.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkMimeW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkMultiByteBase.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkNtlm.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkNtlmW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkOAuth1.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkOAuth1W.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkOAuth2.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkOAuth2W.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkObject.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkPdf.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkPdfW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkPem.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkPemW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkPfx.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkPfxW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkPkcs11.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkPkcs11W.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkPrivateKey.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkPrivateKeyW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkPrng.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkPrngW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkPublicKey.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkPublicKeyW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkRegistry.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkRest.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkRestW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkRsa.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkRsaW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSCard.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSCardW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkScMinidriver.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkScMinidriverW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkScp.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkScpW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSecrets.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSecretsW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSecureString.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSecureStringW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkServerSentEvent.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkServerSentEventW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkService.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSettings.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSFtp.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSFtpDir.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSFtpDirW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSFtpFile.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSFtpFileW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSFtpProgress.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSFtpProgressW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSFtpW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSocket.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSocketW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSpider.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSpiderW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSsh.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSshKey.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSshKeyW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSshTunnel.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSshTunnelW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkSshW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkStream.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkStreamW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkString.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkStringArray.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkStringArrayW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkStringBuilder.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkStringBuilderW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkStringTable.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkStringTableW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkTar.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkTarProgress.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkTarProgressW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkTarW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkTask.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkTaskChain.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkTaskChainW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkTaskW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkTrustedRoots.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkTrustedRootsW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkUnixCompress.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkUnixCompressW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkUpload.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkUploadW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkUrl.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkUrlW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkWebSocket.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkWebSocketW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkWideCharBase.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkXml.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkXmlCertVault.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkXmlCertVaultW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkXmlDSig.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkXmlDSigGen.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkXmlDSigGenW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkXmlDSigW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkXmlW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkXmp.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkXmpW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkZip.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkZipCrc.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkZipCrcW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkZipEntry.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkZipEntryW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkZipProgress.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkZipProgressW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\CkZipW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\ck_inttypes.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkAi.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkAiW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkAsn.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkAsnW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkAuthAws.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkAuthAwsW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkAuthAzureSAS.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkAuthAzureSASW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkAuthAzureStorage.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkAuthAzureStorageW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkAuthGoogle.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkAuthGoogleW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkBinData.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkBinDataW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkByteData.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkBz2.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkBz2W.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkCache.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkCacheW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkCert.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkCertChain.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkCertChainW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkCertStore.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkCertStoreW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkCertW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkCharset.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkCharsetW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkCodeSign.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkCodeSignW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkCompression.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkCompressionW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkCrypt2.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkCrypt2W.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkCsr.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkCsrW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkCsv.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkCsvW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkDateTime.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkDateTimeW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkDh.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkDhW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkDirTree.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkDirTreeW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkDkim.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkDkimW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkDns.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkDnsW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkDsa.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkDsaW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkDtObj.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkDtObjW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkEcc.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkEccW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkEdDSA.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkEdDSAW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkEmail.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkEmailBundle.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkEmailBundleW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkEmailW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkFileAccess.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkFileAccessW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkFtp2.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkFtp2W.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkGlobal.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkGlobalW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkGzip.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkGzipW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkHashtable.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkHashtableW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkHtmlToText.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkHtmlToTextW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkHtmlToXml.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkHtmlToXmlW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkHttp.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkHttpRequest.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkHttpRequestW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkHttpResponse.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkHttpResponseW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkHttpW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkImap.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkImapW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkJavaKeyStore.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkJavaKeyStoreW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkJsonArray.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkJsonArrayW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkJsonObject.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkJsonObjectW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkJwe.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkJweW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkJws.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkJwsW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkJwt.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkJwtW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkLog.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkLogW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkMailboxes.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkMailboxesW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkMailMan.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkMailManW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkMessageSet.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkMessageSetW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkMht.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkMhtW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkMime.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkMimeW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkNtlm.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkNtlmW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkOAuth1.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkOAuth1W.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkOAuth2.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkOAuth2W.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkPdf.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkPdfW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkPem.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkPemW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkPfx.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkPfxW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkPkcs11.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkPkcs11W.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkPrivateKey.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkPrivateKeyW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkPrng.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkPrngW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkPublicKey.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkPublicKeyW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkRest.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkRestW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkRsa.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkRsaW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkSCard.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkSCardW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkScMinidriver.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkScMinidriverW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkScp.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkScpW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkSecrets.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkSecretsW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkSecureString.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkSecureStringW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkServerSentEvent.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkServerSentEventW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkSFtp.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkSFtpDir.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkSFtpDirW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkSFtpFile.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkSFtpFileW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkSFtpW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkSocket.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkSocketW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkSpider.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkSpiderW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkSsh.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkSshKey.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkSshKeyW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkSshTunnel.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkSshTunnelW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkSshW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkStream.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkStreamW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkString.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkStringArray.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkStringArrayW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkStringBuilder.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkStringBuilderW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkStringTable.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkStringTableW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkTar.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkTarW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkTask.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkTaskChain.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkTaskChainW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkTaskW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkTrustedRoots.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkTrustedRootsW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkUnixCompress.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkUnixCompressW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkUpload.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkUploadW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkUrl.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkUrlW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkWebSocket.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkWebSocketW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkXml.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkXmlCertVault.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkXmlCertVaultW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkXmlDSig.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkXmlDSigGen.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkXmlDSigGenW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkXmlDSigW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkXmlW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkXmp.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkXmpW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkZip.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkZipCrc.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkZipCrcW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkZipEntry.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkZipEntryW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\C_CkZipW.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\FileTime.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\int64.h" />
+    <ClInclude Include="Dependencies\Chilkat\include\Chilkat\SystemTime.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

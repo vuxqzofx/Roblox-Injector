@@ -1,0 +1,44 @@
+// This is a generated source file for Chilkat version 11.3.0
+#ifndef _C_CkHashtableWH
+#define _C_CkHashtableWH
+#include "chilkatDefs.h"
+
+#include "ck_inttypes.h"
+#include "Chilkat_C.h"
+
+
+CK_C_VISIBLE_PUBLIC HCkHashtableW CkHashtableW_Create(void);
+CK_C_VISIBLE_PUBLIC void CkHashtableW_Dispose(HCkHashtableW handle);
+CK_C_VISIBLE_PUBLIC int CkHashtableW_getCount(HCkHashtableW cHandle);
+CK_C_VISIBLE_PUBLIC void CkHashtableW_getDebugLogFilePath(HCkHashtableW cHandle, HCkString retval);
+CK_C_VISIBLE_PUBLIC void  CkHashtableW_putDebugLogFilePath(HCkHashtableW cHandle, const wchar_t *newVal);
+CK_C_VISIBLE_PUBLIC const wchar_t *CkHashtableW_debugLogFilePath(HCkHashtableW cHandle);
+CK_C_VISIBLE_PUBLIC void CkHashtableW_getLastErrorHtml(HCkHashtableW cHandle, HCkString retval);
+CK_C_VISIBLE_PUBLIC const wchar_t *CkHashtableW_lastErrorHtml(HCkHashtableW cHandle);
+CK_C_VISIBLE_PUBLIC void CkHashtableW_getLastErrorText(HCkHashtableW cHandle, HCkString retval);
+CK_C_VISIBLE_PUBLIC const wchar_t *CkHashtableW_lastErrorText(HCkHashtableW cHandle);
+CK_C_VISIBLE_PUBLIC void CkHashtableW_getLastErrorXml(HCkHashtableW cHandle, HCkString retval);
+CK_C_VISIBLE_PUBLIC const wchar_t *CkHashtableW_lastErrorXml(HCkHashtableW cHandle);
+CK_C_VISIBLE_PUBLIC BOOL CkHashtableW_getLastMethodSuccess(HCkHashtableW cHandle);
+CK_C_VISIBLE_PUBLIC void  CkHashtableW_putLastMethodSuccess(HCkHashtableW cHandle, BOOL newVal);
+CK_C_VISIBLE_PUBLIC BOOL CkHashtableW_getVerboseLogging(HCkHashtableW cHandle);
+CK_C_VISIBLE_PUBLIC void  CkHashtableW_putVerboseLogging(HCkHashtableW cHandle, BOOL newVal);
+CK_C_VISIBLE_PUBLIC void CkHashtableW_getVersion(HCkHashtableW cHandle, HCkString retval);
+CK_C_VISIBLE_PUBLIC const wchar_t *CkHashtableW_version(HCkHashtableW cHandle);
+CK_C_VISIBLE_PUBLIC BOOL CkHashtableW_AddFromXmlSb(HCkHashtableW cHandle, HCkStringBuilderW sbXml);
+CK_C_VISIBLE_PUBLIC BOOL CkHashtableW_AddInt(HCkHashtableW cHandle, const wchar_t *key, int value);
+CK_C_VISIBLE_PUBLIC BOOL CkHashtableW_AddQueryParams(HCkHashtableW cHandle, const wchar_t *queryParams);
+CK_C_VISIBLE_PUBLIC BOOL CkHashtableW_AddStr(HCkHashtableW cHandle, const wchar_t *key, const wchar_t *value);
+CK_C_VISIBLE_PUBLIC void CkHashtableW_Clear(HCkHashtableW cHandle);
+CK_C_VISIBLE_PUBLIC BOOL CkHashtableW_ClearWithNewCapacity(HCkHashtableW cHandle, int capacity);
+CK_C_VISIBLE_PUBLIC BOOL CkHashtableW_Contains(HCkHashtableW cHandle, const wchar_t *key);
+CK_C_VISIBLE_PUBLIC BOOL CkHashtableW_ContainsIntKey(HCkHashtableW cHandle, int key);
+CK_C_VISIBLE_PUBLIC BOOL CkHashtableW_GetKeys(HCkHashtableW cHandle, HCkStringTableW strTable);
+CK_C_VISIBLE_PUBLIC int CkHashtableW_LookupInt(HCkHashtableW cHandle, const wchar_t *key);
+CK_C_VISIBLE_PUBLIC BOOL CkHashtableW_LookupStr(HCkHashtableW cHandle, const wchar_t *key, HCkString outStr);
+CK_C_VISIBLE_PUBLIC const wchar_t *CkHashtableW_lookupStr(HCkHashtableW cHandle, const wchar_t *key);
+CK_C_VISIBLE_PUBLIC BOOL CkHashtableW_Remove(HCkHashtableW cHandle, const wchar_t *key);
+CK_C_VISIBLE_PUBLIC BOOL CkHashtableW_ToQueryString(HCkHashtableW cHandle, HCkString outStr);
+CK_C_VISIBLE_PUBLIC const wchar_t *CkHashtableW_toQueryString(HCkHashtableW cHandle);
+CK_C_VISIBLE_PUBLIC BOOL CkHashtableW_ToXmlSb(HCkHashtableW cHandle, HCkStringBuilderW sbXml);
+#endif
