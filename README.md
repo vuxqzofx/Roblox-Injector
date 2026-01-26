@@ -16,7 +16,7 @@ After you have done that add this into Proxy.h:
 #pragma comment(linker, "/export:_IsExceptionObjectToBeDestroyed=C:\\Windows\\System32\\vcruntime140.dll._IsExceptionObjectToBeDestroyed,@4")
 #pragma comment(linker, "/export:_SetWinRTOutOfMemoryExceptionCallback=C:\\Windows\\System32\\vcruntime140.dll._SetWinRTOutOfMemoryExceptionCallback,@5")
 #pragma comment(linker, "/export:__AdjustPointer=C:\\Windows\\System32\\vcruntime140.dll.__AdjustPointer,@6")
-#pragma comment(linker, "/export:__BuildCatchObject=C:\\Windows\\System32\\vcruntime140.Qdll.__BuildCatchObject,@7")
+#pragma comment(linker, "/export:__BuildCatchObject=C:\\Windows\\System32\\vcruntime140.dll.__BuildCatchObject,@7")
 #pragma comment(linker, "/export:__BuildCatchObjectHelper=C:\\Windows\\System32\\vcruntime140.dll.__BuildCatchObjectHelper,@8")
 #pragma comment(linker, "/export:__C_specific_handler=C:\\Windows\\System32\\vcruntime140.dll.__C_specific_handler,@9")
 #pragma comment(linker, "/export:__C_specific_handler_noexcept=C:\\Windows\\System32\\vcruntime140.dll.__C_specific_handler_noexcept,@10")
