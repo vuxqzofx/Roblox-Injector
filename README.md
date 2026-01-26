@@ -1,6 +1,6 @@
 # Roblox-Injector
 This source is a roblox injector using the Proxying method with vcruntime140.dll  
-# Setup
+## Setup
 For this to work you need to first put this under your DllMain:  
 ```Cpp
 extern "C" __declspec(dllexport) int NextHook(int nCode, WPARAM wParam, LPARAM lParam) { return CallNextHookEx(NULL, nCode, wParam, lParam); }
@@ -82,6 +82,6 @@ After you have done that add this into Proxy.h:
 #pragma comment(linker, "/export:wcsrchr=C:\\Windows\\System32\\vcruntime140.dll.wcsrchr,@70")
 #pragma comment(linker, "/export:wcsstr=C:\\Windows\\System32\\vcruntime140.dll.wcsstr,@71")
 ```
-# More Stuff
+## More Stuff
 Module: https://github.com/vuxqzofx/YuB-X-Public  
 Join https://discord.gg/wJCZ6Wy5qN for more
