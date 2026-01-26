@@ -1,0 +1,87 @@
+# Roblox-Injector
+This source is a roblox injector using the Proxying method with vcruntime140.dll  
+# Setup
+For this to work you need to first put this under your DllMain:  
+```Cpp
+extern "C" __declspec(dllexport) int NextHook(int nCode, WPARAM wParam, LPARAM lParam) { return CallNextHookEx(NULL, nCode, wParam, lParam); }
+```
+If you have dont this then the next step is to make a new file called Proxy.h and include it into your main.cpp  
+After you have done that add this into Proxy.h:  
+```Cpp
+#pragma once
+
+#pragma comment(linker, "/export:_CreateFrameInfo=C:\\Windows\\System32\\vcruntime140.dll._CreateFrameInfo,@1")
+#pragma comment(linker, "/export:_CxxThrowException=C:\\Windows\\System32\\vcruntime140.dll._CxxThrowException,@2")
+#pragma comment(linker, "/export:_FindAndUnlinkFrame=C:\\Windows\\System32\\vcruntime140.dll._FindAndUnlinkFrame,@3")
+#pragma comment(linker, "/export:_IsExceptionObjectToBeDestroyed=C:\\Windows\\System32\\vcruntime140.dll._IsExceptionObjectToBeDestroyed,@4")
+#pragma comment(linker, "/export:_SetWinRTOutOfMemoryExceptionCallback=C:\\Windows\\System32\\vcruntime140.dll._SetWinRTOutOfMemoryExceptionCallback,@5")
+#pragma comment(linker, "/export:__AdjustPointer=C:\\Windows\\System32\\vcruntime140.dll.__AdjustPointer,@6")
+#pragma comment(linker, "/export:__BuildCatchObject=C:\\Windows\\System32\\vcruntime140.Qdll.__BuildCatchObject,@7")
+#pragma comment(linker, "/export:__BuildCatchObjectHelper=C:\\Windows\\System32\\vcruntime140.dll.__BuildCatchObjectHelper,@8")
+#pragma comment(linker, "/export:__C_specific_handler=C:\\Windows\\System32\\vcruntime140.dll.__C_specific_handler,@9")
+#pragma comment(linker, "/export:__C_specific_handler_noexcept=C:\\Windows\\System32\\vcruntime140.dll.__C_specific_handler_noexcept,@10")
+#pragma comment(linker, "/export:__CxxDetectRethrow=C:\\Windows\\System32\\vcruntime140.dll.__CxxDetectRethrow,@11")
+#pragma comment(linker, "/export:__CxxExceptionFilter=C:\\Windows\\System32\\vcruntime140.dll.__CxxExceptionFilter,@12")
+#pragma comment(linker, "/export:__CxxFrameHandler=C:\\Windows\\System32\\vcruntime140.dll.__CxxFrameHandler,@13")
+#pragma comment(linker, "/export:__CxxFrameHandler2=C:\\Windows\\System32\\vcruntime140.dll.__CxxFrameHandler2,@14")
+#pragma comment(linker, "/export:__CxxFrameHandler3=C:\\Windows\\System32\\vcruntime140.dll.__CxxFrameHandler3,@15")
+#pragma comment(linker, "/export:__CxxQueryExceptionSize=C:\\Windows\\System32\\vcruntime140.dll.__CxxQueryExceptionSize,@16")
+#pragma comment(linker, "/export:__CxxRegisterExceptionObject=C:\\Windows\\System32\\vcruntime140.dll.__CxxRegisterExceptionObject,@17")
+#pragma comment(linker, "/export:__CxxUnregisterExceptionObject=C:\\Windows\\System32\\vcruntime140.dll.__CxxUnregisterExceptionObject,@18")
+#pragma comment(linker, "/export:__DestructExceptionObject=C:\\Windows\\System32\\vcruntime140.dll.__DestructExceptionObject,@19")
+#pragma comment(linker, "/export:__FrameUnwindFilter=C:\\Windows\\System32\\vcruntime140.dll.__FrameUnwindFilter,@20")
+#pragma comment(linker, "/export:__GetPlatformExceptionInfo=C:\\Windows\\System32\\vcruntime140.dll.__GetPlatformExceptionInfo,@21")
+#pragma comment(linker, "/export:__NLG_Dispatch2=C:\\Windows\\System32\\vcruntime140.dll.__NLG_Dispatch2,@22")
+#pragma comment(linker, "/export:__NLG_Return2=C:\\Windows\\System32\\vcruntime140.dll.__NLG_Return2,@23")
+#pragma comment(linker, "/export:__RTCastToVoid=C:\\Windows\\System32\\vcruntime140.dll.__RTCastToVoid,@24")
+#pragma comment(linker, "/export:__RTDynamicCast=C:\\Windows\\System32\\vcruntime140.dll.__RTDynamicCast,@25")
+#pragma comment(linker, "/export:__RTtypeid=C:\\Windows\\System32\\vcruntime140.dll.__RTtypeid,@26")
+#pragma comment(linker, "/export:__TypeMatch=C:\\Windows\\System32\\vcruntime140.dll.__TypeMatch,@27")
+#pragma comment(linker, "/export:__current_exception=C:\\Windows\\System32\\vcruntime140.dll.__current_exception,@28")
+#pragma comment(linker, "/export:__current_exception_context=C:\\Windows\\System32\\vcruntime140.dll.__current_exception_context,@29")
+#pragma comment(linker, "/export:__intrinsic_setjmp=C:\\Windows\\System32\\vcruntime140.dll.__intrinsic_setjmp,@30")
+#pragma comment(linker, "/export:__intrinsic_setjmpex=C:\\Windows\\System32\\vcruntime140.dll.__intrinsic_setjmpex,@31")
+#pragma comment(linker, "/export:__processing_throw=C:\\Windows\\System32\\vcruntime140.dll.__processing_throw,@32")
+#pragma comment(linker, "/export:__report_gsfailure=C:\\Windows\\System32\\vcruntime140.dll.__report_gsfailure,@33")
+#pragma comment(linker, "/export:__std_exception_copy=C:\\Windows\\System32\\vcruntime140.dll.__std_exception_copy,@34")
+#pragma comment(linker, "/export:__std_exception_destroy=C:\\Windows\\System32\\vcruntime140.dll.__std_exception_destroy,@35")
+#pragma comment(linker, "/export:__std_terminate=C:\\Windows\\System32\\vcruntime140.dll.__std_terminate,@36")
+#pragma comment(linker, "/export:__std_type_info_compare=C:\\Windows\\System32\\vcruntime140.dll.__std_type_info_compare,@37")
+#pragma comment(linker, "/export:__std_type_info_destroy_list=C:\\Windows\\System32\\vcruntime140.dll.__std_type_info_destroy_list,@38")
+#pragma comment(linker, "/export:__std_type_info_hash=C:\\Windows\\System32\\vcruntime140.dll.__std_type_info_hash,@39")
+#pragma comment(linker, "/export:__std_type_info_name=C:\\Windows\\System32\\vcruntime140.dll.__std_type_info_name,@40")
+#pragma comment(linker, "/export:__telemetry_main_invoke_trigger=C:\\Windows\\System32\\vcruntime140.dll.__telemetry_main_invoke_trigger,@41")
+#pragma comment(linker, "/export:__telemetry_main_return_trigger=C:\\Windows\\System32\\vcruntime140.dll.__telemetry_main_return_trigger,@42")
+#pragma comment(linker, "/export:__unDName=C:\\Windows\\System32\\vcruntime140.dll.__unDName,@43")
+#pragma comment(linker, "/export:__unDNameEx=C:\\Windows\\System32\\vcruntime140.dll.__unDNameEx,@44")
+#pragma comment(linker, "/export:__uncaught_exception=C:\\Windows\\System32\\vcruntime140.dll.__uncaught_exception,@45")
+#pragma comment(linker, "/export:__uncaught_exceptions=C:\\Windows\\System32\\vcruntime140.dll.__uncaught_exceptions,@46")
+#pragma comment(linker, "/export:__vcrt_GetModuleFileNameW=C:\\Windows\\System32\\vcruntime140.dll.__vcrt_GetModuleFileNameW,@47")
+#pragma comment(linker, "/export:__vcrt_GetModuleHandleW=C:\\Windows\\System32\\vcruntime140.dll.__vcrt_GetModuleHandleW,@48")
+#pragma comment(linker, "/export:__vcrt_InitializeCriticalSectionEx=C:\\Windows\\System32\\vcruntime140.dll.__vcrt_InitializeCriticalSectionEx,@49")
+#pragma comment(linker, "/export:__vcrt_LoadLibraryExW=C:\\Windows\\System32\\vcruntime140.dll.__vcrt_LoadLibraryExW,@50")
+#pragma comment(linker, "/export:_get_purecall_handler=C:\\Windows\\System32\\vcruntime140.dll._get_purecall_handler,@51")
+#pragma comment(linker, "/export:_get_unexpected=C:\\Windows\\System32\\vcruntime140.dll._get_unexpected,@52")
+#pragma comment(linker, "/export:_is_exception_typeof=C:\\Windows\\System32\\vcruntime140.dll._is_exception_typeof,@53")
+#pragma comment(linker, "/export:_local_unwind=C:\\Windows\\System32\\vcruntime140.dll._local_unwind,@54")
+#pragma comment(linker, "/export:_purecall=C:\\Windows\\System32\\vcruntime140.dll._purecall,@55")
+#pragma comment(linker, "/export:_set_purecall_handler=C:\\Windows\\System32\\vcruntime140.dll._set_purecall_handler,@56")
+#pragma comment(linker, "/export:_set_se_translator=C:\\Windows\\System32\\vcruntime140.dll._set_se_translator,@57")
+#pragma comment(linker, "/export:longjmp=C:\\Windows\\System32\\vcruntime140.dll.longjmp,@58")
+#pragma comment(linker, "/export:memchr=C:\\Windows\\System32\\vcruntime140.dll.memchr,@59")
+#pragma comment(linker, "/export:memcmp=C:\\Windows\\System32\\vcruntime140.dll.memcmp,@60")
+#pragma comment(linker, "/export:memcpy=C:\\Windows\\System32\\vcruntime140.dll.memcpy,@61")
+#pragma comment(linker, "/export:memmove=C:\\Windows\\System32\\vcruntime140.dll.memmove,@62")
+#pragma comment(linker, "/export:memset=C:\\Windows\\System32\\vcruntime140.dll.memset,@63")
+#pragma comment(linker, "/export:set_unexpected=C:\\Windows\\System32\\vcruntime140.dll.set_unexpected,@64")
+#pragma comment(linker, "/export:strchr=C:\\Windows\\System32\\vcruntime140.dll.strchr,@65")
+#pragma comment(linker, "/export:strrchr=C:\\Windows\\System32\\vcruntime140.dll.strrchr,@66")
+#pragma comment(linker, "/export:strstr=C:\\Windows\\System32\\vcruntime140.dll.strstr,@67")
+#pragma comment(linker, "/export:unexpected=C:\\Windows\\System32\\vcruntime140.dll.unexpected,@68")
+#pragma comment(linker, "/export:wcschr=C:\\Windows\\System32\\vcruntime140.dll.wcschr,@69")
+#pragma comment(linker, "/export:wcsrchr=C:\\Windows\\System32\\vcruntime140.dll.wcsrchr,@70")
+#pragma comment(linker, "/export:wcsstr=C:\\Windows\\System32\\vcruntime140.dll.wcsstr,@71")
+```
+# More Stuff
+Module: https://github.com/vuxqzofx/YuB-X-Public  
+Join https://discord.gg/wJCZ6Wy5qN for more
