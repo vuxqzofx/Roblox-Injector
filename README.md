@@ -1,4 +1,6 @@
-# Roblox-Injector
+# THIS DOES NOT WORK ANYMORE ON THE LATEST VERSION OF ROBLOX
+
+## Roblox-Injector
 This source is a roblox injector using the Proxying method with vcruntime140.dll  
 ## Setup
 For this to work you first need to put this under your DllMain:  
