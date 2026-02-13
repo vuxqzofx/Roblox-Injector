@@ -1,4 +1,5 @@
-# Roblox-Injector
+# THIS IS PATCHED ON ANY ROBLOX VERSION THAT HAS HYPERION V7
+## Roblox-Injector
 This source is a roblox injector using the Proxying method with vcruntime140.dll  
 ## Setup
 For this to work you first need to put this under your DllMain:  
